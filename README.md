@@ -1,6 +1,6 @@
 # Data-Structures-Java
 
-Containing lots of project and problembs about Data Structure algorithm wroten by generally me
+Containing lots of ProgrammingProject and problembs about Data Structure algorithms generally wroten by me
 
 Chapter1- Object‐Oriented Programming and Class Hierarchies
 
