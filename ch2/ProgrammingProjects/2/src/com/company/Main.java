@@ -1,52 +1,43 @@
 package com.company;
 
+/**
+ * Written by: Omer F. Akduman
+ * 6.02.2022
+ */
 public class Main {
+
+    /**
+     *
+     * Programming Project
+     * 2. We can represent a polynomial as a list of terms, where the terms are in decreasing order by exponent. You should define a class Term that contains data fields coef and exponent. For example, –5x4
+     * has a coef value of –5 and an exponent value of 4. To add two polynomials, you traverse both lists
+     * and examine the two terms at the current iterator position. If the exponent of one is smaller than the
+     * exponent of the other, then insert the larger one into the result and advance that list’s iterator. If the
+     * exponents are equal, then create a new term with that exponent and the sum of the two coefficients,
+     * and advance both iterators. For example:
+     * 3x^4 + 2x^2 + 3x + 7 added to 2x^3 + -5x + 5 = 3x^4 + 2x^3 + 2x^2 + -2x + 12
+     * Write a polynomial class with an inner class Term. The polynomial class should have a data field
+     * terms that is of type LinkedList <Term>. Provide an addpoly method and a readpoly method.
+     * Method readypoly reads a string represending a polynomial such as “2 4 3 2 x x ” and returns a
+     * polynomial list with two terms. You also need a toString method for class Term and Polynomial
+     * that would display this stored polynomial 2x^3 + −4x^2.
+     */
 
     public static void main(String[] args) {
 
         Polynomial poly = new Polynomial();
 
-        String polinom = "2x^3";
+        String polinom = "3x^4 + 2x^2 + 3x + 7";
+        String polinom2 = "2x^3 + -5x + 5";
 
-        //readPoly(polinom);
         poly.readPoly(polinom);
         poly.show();
         System.out.println();
-        polinom = "2x^4 + 31 + -25 + 2x^2";
-        poly.readPoly(polinom);
+        System.out.println();
+        poly.addPoly(polinom2);
 
         poly.show();
 
     }
 
-    public static void readPoly(String poly){
-        System.out.println(poly);
-        String[] tokens = poly.split(" ");
-        String[] tokens2 = tokens[0].split("x");
-        tokens2[1]=tokens2[1].replace("^", "");
-        for (String token : tokens)
-            if (!token.equals("+"))
-                split(token);
-
-    }
-
-    public static void split(String token){
-        int coef = 0;
-        int expo = 0;
-        if (token.contains("^")){//if contains ^ it is a full term mean exist coef and exponent part
-            String tokens2[ ]= token.split("x");
-            coef = Integer.parseInt(tokens2[0]);
-            if (tokens2.length>1) {
-                tokens2[1] = tokens2[1].replace("^", "");
-                expo = Integer.parseInt(tokens2[1]);
-            }
-        }
-        else if (token.contains("x")){//it has no exponent
-            String tokens2[ ]= token.split("x");
-            coef = Integer.parseInt(tokens2[0]);
-        }
-        else{//its only number
-            coef = Integer.parseInt(token);
-        }
-    }
 }

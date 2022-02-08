@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -17,6 +18,10 @@ public class Main {
         myList.add("kerim");
         myList.add("durmaz");
         myList.add("sinan");
+        print(myList);
+        Iterator iter = myList.listIterator(0);
+        iter.next();
+        iter.remove();
         print(myList);
 
     }

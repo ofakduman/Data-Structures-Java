@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Date;
 
-/**
+/** Programming Project
  * 1. Develop a program to maintain a list of homework assignments. When an assignment is assigned,
  * add it to the list, and when it is completed, remove it. You should keep track of the due date. Your
  * program should provide the following services:

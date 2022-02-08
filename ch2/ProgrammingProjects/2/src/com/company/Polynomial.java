@@ -8,8 +8,16 @@ import java.util.Scanner;
 public class Polynomial {
     LinkedList <Term> terms = new LinkedList<>();
 
-
     public void readPoly(String poly){
+        terms.clear();
+        addPoly(poly);
+    }
+
+    /**
+     * A method to add Polynomial string to terms
+     * @param poly is a string containing polynamial terms
+     */
+    public void addPoly(String poly){
         String[] tokens = poly.split(" ");
         String[] tokens2 = tokens[0].split("x");
         tokens2[1]=tokens2[1].replace("^", "");
@@ -33,14 +41,21 @@ public class Polynomial {
         else if (token.contains("x")){//it has no exponent
             String tokens2[ ]= token.split("x");
             coef = Integer.parseInt(tokens2[0]);
+            expo = 1;
         }
         else{//its only number
             coef = Integer.parseInt(token);
         }
+
+        //at the end adds terms
         add(new Term(coef,expo));
     }
 
 
+    /**
+     * A method to add a term to list Ascending exponent order
+     * @param term a term to will be added
+     */
     public void add(Term term){
         int compared = -5;
         ListIterator<Term> iter = (ListIterator<Term>) terms.iterator();
@@ -51,7 +66,6 @@ public class Polynomial {
                 return;
             }
             if (compared>0) {
-                System.out.println("term: " +term);
                 iter.previous();
                 iter.add(term);
                 return;
@@ -60,6 +74,9 @@ public class Polynomial {
         iter.add(term);
     }
 
+    /**
+     * A method to shows polynomial as a string
+     */
     public void show(){
         Iterator<Term> iter = terms.iterator();
         while(iter.hasNext()){
@@ -67,6 +84,9 @@ public class Polynomial {
         }
     }
 
+    /**
+     * Inner class to represent term
+     */
     private class Term implements Comparable<Term> {
         private int coef;
         private int exponent;
@@ -83,6 +103,9 @@ public class Polynomial {
         }
 
         @Override
+        /**
+         * An overrided method to check terms are equal or not
+         */
         public boolean equals(Object o) {
             if (this == o) return true;
             if (!(o instanceof com.company.Term)) return false;
@@ -138,16 +161,20 @@ public class Polynomial {
         }
 
         @Override
+        /**
+         * A overrided method to show a term
+         */
         public String toString() {
-            if (exponent == 0 && coef!=0){
+            if ( coef!=0 && exponent == 0 ){
                 return "" + coef;
             }
+            else if (exponent==1)
+                return coef + "x" ;
+
             else if (coef!=0 & exponent!=0)
                 return coef + "x^" + exponent;
+
             return "";
         }
-
-
     }
-
 }

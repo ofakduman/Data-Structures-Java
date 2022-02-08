@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="40741d10-10fd-42ca-9f9f-5d368a84c0c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../2-5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/out/production/3/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3/src/com/company/Polynomial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/out/production/4/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/out/production/4/com/company/MySingleLinkedList$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/out/production/4/com/company/MySingleLinkedList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/src/com/company/MySingleLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/out/production/packag/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/out/production/packag/Paket1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/out/production/packag/Paket2/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/packag.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/src/Paket1/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ch1/packag/src/Paket2/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../1/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/out/production/2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2/out/production/2/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/out/production/2/com/company/Polynomial$Term.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2/out/production/2/com/company/Polynomial$Term.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/out/production/2/com/company/Polynomial.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2/out/production/2/com/company/Polynomial.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/src/com/company/Polynomial.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2/src/com/company/Polynomial.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="24ohvIc3xc9034HQHWqIU29Zxik" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="5" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40741d10-10fd-42ca-9f9f-5d368a84c0c1" name="Changes" comment="" />
+      <created>1644303079718</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644303079718</updated>
+    </task>
+    <servers />
+  </component>
+</project>
