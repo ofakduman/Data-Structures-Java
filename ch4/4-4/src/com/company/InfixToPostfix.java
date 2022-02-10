@@ -119,4 +119,7 @@ public class InfixToPostfix {
     private static int precedence(char op) {
         return PRECEDENCE[OPERATORS.indexOf(op)] ;
     }
+
+    public class SyntaxErrorException {
+    }
 }

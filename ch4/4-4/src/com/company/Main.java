@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.StringJoiner;
+
 public class Main {
 
     public static void main(String[] args) throws PostfixEvaluator.SyntaxErrorException, PostfixExceptions {
@@ -17,6 +19,12 @@ public class Main {
         //System.out.println("result: " + PostfixEvaluator.eval(""));
 
         System.out.println(InfixToPostfix.convert("3 + 5"));
+
+        StringJoiner sj = new StringJoiner(":", "[", "]");
+        sj.add("George").add("Sally").add("Fred");
+        String desiredString = sj.toString();
+
+        System.out.println(sj);
 
     }
 }
