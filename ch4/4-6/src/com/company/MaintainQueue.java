@@ -1,10 +1,6 @@
 package com.company;
 
-import java.util.Queue;
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Class to maintain a queue of customers.
@@ -21,6 +17,18 @@ public class MaintainQueue {
         in = new Scanner(System.in);
     }
 
+    public String toString(){
+        String result = "";
+        Iterator iter = customers.iterator();
+        String str = "";
+
+        while(iter.hasNext()){
+            result += " " + iter.next();
+        }
+
+        return result;
+    }
+
 /**
  * Performs the operations selected on queue customers.
  * @pre customers has been created.
@@ -29,7 +37,7 @@ public class MaintainQueue {
 public void processCustomers() {
     String choice = "";
     String[] choices =
-            {"add", "peek", "remove", "size", "position", "quit"};
+            {"add", "peek", "remove", "size", "position","toString", "quit"};
     // Perform all operations selected by user.
     while (!choice.equals("quit")) {
         // Process the current choice.
@@ -56,6 +64,10 @@ public void processCustomers() {
                     break;
                 case "size":
                     System.out.println("Size of queue is " + customers.size());
+                    break;
+                case "toString":
+                    String result = toString();
+                    System.out.println(result);
                     break;
                 case "position":
                     System.out.println("Enter customer name");
