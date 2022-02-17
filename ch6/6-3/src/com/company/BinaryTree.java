@@ -60,6 +60,63 @@ public class BinaryTree<E> implements Serializable {
         return (root.left == null && root.right == null);
     }
 
+
+    public String inOrder(){
+        StringBuilder sb = new StringBuilder();
+        inOrder(root, 1, sb);
+        return sb.toString();
+    }
+
+    private void inOrder(Node<E> node, int depth, StringBuilder sb){
+        sb.append(" ".repeat(Math.max(0,depth-1)));
+        if (node == null)
+            sb.append("null\n");
+        else{
+            inOrder(node.left, depth+1, sb);
+            sb.append(node.toString());
+            sb.append("\n");
+            inOrder(node.right, depth+1, sb);
+        }
+    }
+
+
+    public String postOrder(){
+        StringBuilder sb = new StringBuilder();
+        postOrder(root, 1, sb);
+        return sb.toString();
+    }
+
+    private void postOrder(Node<E> node, int depth, StringBuilder sb){
+        sb.append(" ".repeat(Math.max(0, depth - 1)));
+        if (node == null)
+            sb.append("null\n");
+        else{
+            postOrder(node.left, depth+1, sb);
+            postOrder(node.right, depth+1, sb);
+            sb.append(node.toString());
+            sb.append("\n");
+        }
+    }
+
+    public String preOrder(){
+        StringBuilder sb = new StringBuilder();
+        preOrder(root, 1, sb);
+        return sb.toString();
+    }
+
+    private void preOrder(Node<E> node, int depth, StringBuilder sb){
+        sb.append(" ".repeat(Math.max(0, depth)));
+        if (node == null)
+            sb.append("null\n");
+        else{
+            sb.append(node.toString());
+            sb.append("\n");
+            preOrder(node.left, depth+1, sb);
+            preOrder(node.right, depth+1, sb);
+
+        }
+    }
+
     public String toString() {
         StringBuilder sb = new StringBuilder();
         toString(root, 1, sb);
@@ -73,9 +130,7 @@ public class BinaryTree<E> implements Serializable {
      */
     private void toString(Node<E> node, int depth,
                           StringBuilder sb) {
-        for (int i = 1; i < depth; i++) {
-            sb.append(" ");
-        }
+        sb.append(" ".repeat(Math.max(0, depth - 1)));
         if (node == null) {
             sb.append("null\n");
         } else {
@@ -142,4 +197,16 @@ public class BinaryTree<E> implements Serializable {
             return data.toString();
         }
     }
+
+    /**
+     * PROGRAMMING
+     * 1. Write a method for the BinaryTree class that returns the preorder traversal of a binary tree
+     * as a sequence of strings each separated by a space.
+     * 2. Write a method to display the postorder traversal of a binary tree in the same form as
+     * Programming Exercise 1.
+     * 3. Write a method to display the inorder traversal of a binary tree in the same form as
+     * Programming Exercise 1, except place a left parenthesis before each subtree and a right parenthesis
+     * after each subtree. Don’t display anything for an empty subtree. For example, the
+     * expression tree shown in Figure 6.12 would be represented as (((x) + (y)) * ((a) / (b))).
+     */
 }
