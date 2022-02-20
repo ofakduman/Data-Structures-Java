@@ -12,6 +12,43 @@ public class BinarySearchTree<E extends Comparable<E>>
      */
     protected E deleteReturn;
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    /**
+     * PROGRAMMING
+     * 1. Write methods contains and remove for the BinarySearchTree class. Use methods find and
+     * delete to do the work.
+     */
+    /**
+     * A method to check whether bst contains target element or not
+     * @param target an element to wanted to check whether bst is contain or not
+     * @return true if the target element exist in the bst
+     *          false if not in the bst
+     */
+    public boolean contains(E target){
+        return find(target)!=null;
+    }
+
+    /**
+     * A method to remove an element in the bst
+     * @param target is wanted to remove element from bst
+     * @return true if the removed succesfully "Find and remove"
+     *          false if the removed element not in the bst
+     */
+    public boolean remove(E target){
+        return delete(target)!=null;
+    }
+
+
+    /**
+     *
+     */
+
+
+
     /** Starter method find.
      pre: The target object must implement
      the Comparable interface.
@@ -78,6 +115,67 @@ public class BinarySearchTree<E extends Comparable<E>>
         }
     }
 
+
+/**
+ *  * 2. Self‐Check Exercise 4 indicates that two items can be used to replace a data item in a
+ *  * binary search tree. Rewrite method delete so that it retrieves the leftmost element in the
+ *  * right subtree instead. You will also need to provide a method findSmallestChild.
+ */
+    /** Starter method delete2.
+     post: The object is not in the tree.
+     @param target The object to be deleted
+     @return The object deleted from the tree
+     or null if the object was not in the tree
+     @throws ClassCastException if target does not implement
+     Comparable
+     */
+    public E delete2(E target){
+        root = delete2(root, target);
+        return deleteReturn;
+    }
+    private Node<E> delete2(Node<E> localRoot, E item){
+        if(localRoot == null){
+            deleteReturn = null;
+            return localRoot;
+        }
+        //search for item to delete
+        int compResult = item.compareTo(localRoot.data);
+        if (compResult<0){
+            localRoot.left = delete2(localRoot.left, item);
+            return localRoot;
+        }
+        else if (compResult>0){
+            localRoot.right = delete2(localRoot.right,item);
+            return localRoot;
+        }
+        else{//item is at local root
+            deleteReturn = localRoot.data;
+            if (localRoot.right== null){
+                //if there is no right child, return left child
+                //which can also be null.
+                return localRoot.left;
+            }
+            else if (localRoot.left == null)//if there is no left child, return right child
+                return localRoot.right;
+            else{//Node being deleted has 2 children, replace the data
+                //with inorder successor
+                if (localRoot.right.left == null){
+                    // The right child has nor left child
+                    //replace the data with the data int the right child
+                    localRoot.data = localRoot.right.data;
+                    localRoot.right = localRoot.right.right;
+                    return localRoot;
+                }else{
+                    // Search for the inorder successor (is) and
+                    //replace deleted node's data with is.
+                    localRoot.data = findSmallestChild(localRoot.right);
+                    return localRoot;
+                }
+
+            }
+
+        }
+    }
 
     /** Starter method delete.
      post: The object is not in the tree.
@@ -147,4 +245,41 @@ public class BinarySearchTree<E extends Comparable<E>>
             }
         }
     }
+
+    /** Find the node that is the
+     inorder predecessor and replace it
+     with its left child (if any).
+     post: The inorder predecessor is removed from the tree.
+     @param parent The parent of possible inorder
+     predecessor (ip)
+     @return The data in the ip
+     */
+    public E findLargestChild(Node<E> parent) {
+        // If the right child has no right child, it is
+        // the inorder predecessor.
+        if (parent.right.right == null) {
+            E returnValue = parent.right.data;
+            parent.right = parent.right.left;
+            return returnValue;
+        } else {
+            return findLargestChild(parent.right);
+        }
+    }
+
+
+    /**
+     * A method to get smallest nodes data end remove it from bst
+     * post: The inorder predecessor is removed from the tree.
+     * @param parent the parent of possible inorder successor (is)
+     * @return the data in the inorder successor (is)
+     */
+    public E findSmallestChild(Node<E> parent){
+        if(parent.left.left == null){
+            E returnValue = parent.left.data;
+            parent.left = parent.left.left;
+            return returnValue;
+        }else
+            return findSmallestChild(parent.left);
+    }
+    public Node<E> getRoot(){return root;}
 }
