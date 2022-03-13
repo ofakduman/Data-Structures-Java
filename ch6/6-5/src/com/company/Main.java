@@ -36,7 +36,6 @@ public class Main {
 
         System.out.println(bst.findSmallestChild(bst.root));
 
-        bstint
     }
 }
 //    private BinaryTree.Node<E> delete(BinaryTree.Node<E> localRoot, E item) {
