@@ -5,15 +5,32 @@ import java.util.LinkedList;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        HashTableOpen<Integer, String> hot = new HashTableOpen<>();
-        hot.put(31,"ali");
-        hot.put(28,"ali");
-        hot.put(15,"ali");
-        hot.put(3,"ali");
-        hot.put(-9,"ali");
-        hot.put(104,"kamil");
-        hot.remove(-9);
-        System.out.println(hot.toString());
+
+
+    }
+
+    public static int calculatePrimeNumber(){
+        int table_size = 101;
+        double traschHold = 0.8;
+
+        int bound = (int) (table_size *traschHold);
+
+        while (bound>2){
+            if (isPrime(bound)==true)
+                return bound;
+            bound-=1;
+        }
+
+        return 2;
+    }
+
+    private static boolean isPrime(int number){
+        int iter_numb = number -1;
+        while (iter_numb>1){
+            if (number%iter_numb==0)
+                return false;
+            iter_numb-=1;
+        }
+        return true;
     }
 }

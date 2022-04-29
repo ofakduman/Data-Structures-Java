@@ -121,7 +121,22 @@ public class HashtableChain<K, V> implements KWHashMap<K, V> {
         }
         return null;
     }
-
+    @Override
+    public String toString() {
+        StringBuilder strBuilder = new StringBuilder();
+        for (int i = 0; i < table.length; i++) {
+            if (table[i] != null){
+                strBuilder.append(i+ "-\t");
+                for (Entry<K, V> nextItem : table[i]) {
+                    strBuilder.append(table[i].toString()+"\n\n");
+                }
+            }
+            else{
+                strBuilder.append(i + "- NotUsed \n");
+            }
+        }
+        return strBuilder.toString();
+    }
     @Override
     public int size() {
         return 0;
@@ -177,6 +192,12 @@ public class HashtableChain<K, V> implements KWHashMap<K, V> {
             V oldVal = value;
             value = val;
             return oldVal;
+        }
+
+        @Override
+        public String toString() {
+            return  "K: " + key + "\t\t"+
+                    "V:\t" + value;
         }
     }
 }
